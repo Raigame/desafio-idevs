@@ -7,5 +7,5 @@ tendo um bloco de notas demonstrando eles com comentários explicando suas funci
 ## Execucção
 Como os códigos não possuem interface programada, sua execução pode ser feita através de uma IDE
 que rode os códigos, ou pelo prompet de comando, com o comando "Java -jar "arquivo.jar"" estando 
-na mesma pasta onde os arquivos estão
+na mesma pasta onde os arquivos estão, se não ir até a pasta onde estão através do prompt
 
