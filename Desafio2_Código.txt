@@ -1,0 +1,29 @@
+
+public class Desafio_2 {
+
+	public static void main(String[] args) {
+		int div[]=new int[10001];//quantidade de divisores
+		int n[]=new int[10001];//numero
+		//verifica quantos divisores o numero tem
+		for(int i=0;i<=10000;i++){
+			for(int j=1;j<=i;j++){
+				if(i%j==0){
+					div[i]+=1;
+				}
+			}	
+		}
+		//verifica se o numero tem a mesma quantidade de divisores que o próximo
+		for(int i=0;i<10000;i++) {
+			if(div[i]==div[i+1]) {//se verdadeiro recebe o numero
+				n[i]=i;
+			}
+		}
+		//imprimir os numeros que tem a mesma quantidade de divisores que o próximo
+		for(int i=0;i<10000;i++){
+			if(n[i]!=0){
+				System.out.println(n[i]);
+			}
+		}
+	}
+}
+

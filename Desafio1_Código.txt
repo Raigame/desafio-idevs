@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class Desafio_1 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String  p;
+		int total=0;
+		p=sc.next();
+		p=p.toLowerCase();
+			//verifica qual caractere(letra) foi digitada na posição i da String
+			for(int i=0;i<p.length();i++) {
+				if(p.charAt(i)=='a'||p.charAt(i)=='e'||p.charAt(i)=='i'||p.charAt(i)=='o'||p.charAt(i)=='u'||p.charAt(i)=='l'||p.charAt(i)=='n'||p.charAt(i)=='r'||p.charAt(i)=='s'||p.charAt(i)=='t'){
+					total+=1;
+				}
+				else if(p.charAt(i)=='d'||p.charAt(i)=='g') {
+					total+=2;
+				}
+				else if(p.charAt(i)=='b'||p.charAt(i)=='c'||p.charAt(i)=='m'||p.charAt(i)=='p'){
+					total+=3;
+				}
+				else if(p.charAt(i)=='f'||p.charAt(i)=='h'||p.charAt(i)=='v'||p.charAt(i)=='w'||p.charAt(i)=='y'){
+					total+=4;
+				}
+				else if(p.charAt(i)=='k') {
+					total+=5;
+				}
+				else if(p.charAt(i)=='j'||p.charAt(i)=='x'){
+					total+=8;
+				}
+				else if(p.charAt(i)=='q'||p.charAt(i)=='z'){
+					total+=10;
+				}
+				
+			}
+			System.out.println(total);
+			sc.close();
+	}
+
+}

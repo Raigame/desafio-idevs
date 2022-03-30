@@ -1,0 +1,51 @@
+import java.util.Scanner;
+public class Desafio_3 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n,maior[],primo[],quant=0,k=0,l=0,maiorP = 0;
+		n=sc.nextInt();
+		maior=new int[n];
+		primo=new int[n];
+		//verifica quantos divisores tem o número
+		for(int i=2;i<n;i++){
+			for(int j=1;j<=i;j++){
+				if(i%j==0){
+					quant++;
+				}
+			
+			}
+			//se for primo recebe o numero primo e a soma até o número inserido
+			if(quant<=2&&i<n){
+				System.out.println();
+				//recebe o primeiro primo nos vetores de soma e dos numeros primos
+				if(k==0){
+					maior[k]=i;
+					primo[l]=i;
+					k++;
+					l++;
+				}
+				else if(k>0){
+					//recebe os próximos primos, somando eles no vetor maior
+					maior[k]=maior[k-1]+i;
+					primo[l]=i;
+					k++;
+					l++;
+				}
+			}
+			quant=0;
+		}
+		//verifica qual a maior soma de numeros primos que resulta num primo
+		for(int i=0;i<l;i++) {
+			for(int j=0;j<k;j++) {
+				if(maior[j]==primo[i]){
+					//recebe o maior numero primo que é resultado da soma
+					maiorP=maior[j];
+				}
+			}
+		}
+		//imprime esse valor
+		System.out.println(maiorP);
+		sc.close();
+	}
+}
